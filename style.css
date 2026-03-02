@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+    /* 
+        网页底图
+        - 在这里更换你的底图纹理
+    */
+    background-image: url('images/ditu2.jpg');
+    background-repeat: repeat; /* 平铺背景 */
+    background-attachment: fixed; /* 固定背景，滚动时不移动 */
+    background-color: #1a1a1a; /* 深色背景 */
+    color: #ffffff; /* 白色文字 */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 现代无衬线字体 */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    /* 
+        更换背景图：
+        - 将 'images/your-hero-image.jpg' 替换为你的图片路径
+        - 推荐尺寸 1920x1280px
+    */
+    background-image: url('images/shouyei.png');
+    background-size: cover; /* 覆盖整个区域 */
+    background-position: center; /* 居中显示 */
+    height: 100vh; /* 占满整个视口高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* 居中内容 */
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    /* 
+        - grid-template-columns: repeat(2, 1fr) 表示两列布局
+        - 如果想变成3列，可以改为 repeat(3, 1fr)
+    */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* 图片之间的间距 */
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden; /* 隐藏放大的图片溢出部分 */
+    border-radius: 8px; /* 轻微的圆角 */
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease; /* 平滑的放大效果 */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05); /* 鼠标悬停时放大图片 */
+}
+
+.portfolio-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-caption {
+    opacity: 1; /* 鼠标悬停时显示标题 */
+}
+
+.portfolio-caption h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* In-depth Section */
+.in-depth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* 专栏之间的间距 */
+}
+
+.in-depth-item {
+    text-align: center;
+}
+
+.in-depth-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.in-depth-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.in-depth-item p {
+    font-size: 1rem;
+    color: #cccccc; /* 正文使用稍浅的颜色 */
+    line-height: 1.6;
+}
+
+/* Life Photos Section */
+.life-photos-grid {
+    display: grid;
+    /* 
+        - 4列布局
+        - 在小屏幕上可以调整为2列或1列，这需要媒体查询（Media Queries）
+    */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.life-photo-item {
+    background-color: #2a2a2a; /* 卡片背景色 */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.life-photo-item:hover {
+    transform: translateY(-5px); /* 鼠标悬停时轻微上移 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.life-photo-item img {
+    width: 100%;
+    display: block;
+}
+
+.life-photo-content {
+    padding: 15px;
+}
+
+.life-photo-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaaaaa; /* 日期颜色 */
+    margin-bottom: 8px;
+}
+
+.life-photo-content h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Footer Section */
+.footer-section {
+    /* 
+        更换背景图：
+        - 将 'images/your-footer-image.jpg' 替换为你的图片路径
+        - 推荐尺寸 1920x1280px
+    */
+    background-image: url('images/weiyei.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* 页脚高度，可根据内容调整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-text h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.footer-text p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
